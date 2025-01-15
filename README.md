@@ -16,23 +16,23 @@ It's a bot to watch youtube (kinda) from telegram chat by bot
 - go to telegram-bot-api folder (not our bot folder) and create a .txt there.
 - write into .txt:
   
-    cd <your-path>\telegram-bot-api\bin
+    cd your-path\telegram-bot-api\bin
   
-    telegram-bot-api --local --http-port=8081 --http-ip-address=127.0.0.1 --api-id=<your-api-id> --api-hash=<your-hash>
+    telegram-bot-api --local --http-port=8081 --http-ip-address=127.0.0.1 --api-id=your-api-id --api-hash=your-hash
 - rename .txt into start.bat
 - open start.bat and hide it away
 - Go to folder with bot
 - Open in text book file named DreamyVideo
 - Fill gaps:
   
-    API_URL = "<your-api-id>"
+    API_URL = "your-api-id"
   
-    bot = telebot.TeleBot("<your-bot-api>")
+    bot = telebot.TeleBot("your-bot-api")
 - Save and close
 - Open in text book file named video_download
 - Fill gap:
   
-    'cookiefile': r"<path-to-cookies>"
+    'cookiefile': r"path-to-cookies"
 - Save and close
 - Create venv opening cmd in this folder and writing: python -m venv .venv
 - activate venv: .\.venv\Scripts\activate
