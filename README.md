@@ -35,7 +35,8 @@ It's a bot to watch youtube (kinda) from telegram chat by bot
     'cookiefile': r"path-to-cookies"
 - Save and close
 - Create venv opening cmd in this folder and writing: python -m venv .venv
-- activate venv: .\venv\Scripts\activate
+- activate venv in cmd: .\venv\Scripts\activate
+- start bot by writing: python3 DreamyVideo.py
 - Go into telegram into chat with your bot and press /start to get info
 - Enjoy your bot
 
