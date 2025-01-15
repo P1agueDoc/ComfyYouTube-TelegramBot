@@ -25,7 +25,7 @@ It's a bot to watch youtube (kinda) from telegram chat by bot
 - Open in text book file named DreamyVideo
 - Fill gaps:
   
-    API_URL = "your-api-id"
+    API_URL = "your-api-id" (it should be made like that: http://127.0.0.1:8081/bot[your-bot-api] example: API_URL = "http://127.0.0.1:8081/bot67457850:krpkfL54lg450kg4g
   
     bot = telebot.TeleBot("your-bot-api")
 - Save and close
