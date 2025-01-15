@@ -67,11 +67,11 @@ def url_download(url):
         try:
             print("I load: ", url)
             result = ydl.extract_info(url, download=False)
-            video_duration = result.get('duration', 0)  # Duration in seconds
+            video_duration = result.get('duration', 0)  # Duration
 
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 result = ydl.extract_info(url, download=True)
-                file_path = ydl.prepare_filename(result)  # Returns the actual file path
+                file_path = ydl.prepare_filename(result)  # file path
                 return file_path
 
         except yt_dlp.utils.DownloadError as e:
