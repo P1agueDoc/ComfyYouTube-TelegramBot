@@ -41,3 +41,6 @@ It's a bot to watch youtube (kinda) from telegram chat by bot
 
 # Unreadable code or caveman writing
 Sorry for bad code, i just got really tired when writing it and decided to just finish it quickly. And i still learning python.
+
+# YouTube sending Forbiden 403
+Can't really do anything here. create cookies.txt again, might help for some time.
