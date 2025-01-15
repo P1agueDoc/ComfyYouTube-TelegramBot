@@ -25,7 +25,7 @@ def download_image(url):
 
 def prepare_thumbnail(thumb_path):
     try:
-        if thumb_path is not None and os.path.exists(thumb_path):  # Check if the file exists
+        if thumb_path is not None and os.path.exists(thumb_path):  # file exists
             print("thumb path loaded correctly")
             directory, original_name = os.path.split(thumb_path)
             prepared_name = f"prep_{os.path.splitext(original_name)[0]}.jpg"
@@ -33,8 +33,8 @@ def prepare_thumbnail(thumb_path):
 
             with Image.open(thumb_path) as img:
                 print("thumb path loaded correctly and getting prepared")
-                img.thumbnail((320, 320))  # Resize to 320x320
-                img.convert("RGB").save(prepared_thumb_path, "JPEG", quality=85)  # Convert to JPEG and save
+                img.thumbnail((320, 320))  # 320x320
+                img.convert("RGB").save(prepared_thumb_path, "JPEG", quality=85)  # JPEG and save
 
             return prepared_thumb_path
         else:
