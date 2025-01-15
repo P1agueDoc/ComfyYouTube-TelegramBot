@@ -14,12 +14,12 @@ def send_video_to_chat(chat_id, video_path, caption=None, thumb_path=None):
 	url = f"{API_URL}/sendVideo"
 
 	video_mime_type, _ = mimetypes.guess_type(video_path)
-	video_mime_type = video_mime_type or "video/mp4"  # Default to video/mp4 if MIME type is not detected
+	video_mime_type = video_mime_type or "video/mp4" 
 
 	thumb_mime_type = None
 	if thumb_path:
 		thumb_mime_type, _ = mimetypes.guess_type(thumb_path)
-		thumb_mime_type = thumb_mime_type or "image/jpeg"  # Default to image/jpeg if MIME type is not detected
+		thumb_mime_type = thumb_mime_type or "image/jpeg" 
 
 	with open(video_path, "rb") as video_file:
 		files = {
@@ -35,7 +35,7 @@ def send_video_to_chat(chat_id, video_path, caption=None, thumb_path=None):
 				if caption:
 					data["caption"] = caption
 
-				# Send the request
+				# Send request
 				response = requests.post(url, files=files, data=data)
 				if response.status_code != 200:
 					print(f"Error: {response.text}")
@@ -79,11 +79,11 @@ def handle_callback(call):
 
 		answer_info = search_youtube_info(video_url1)
 
-		# Format the duration
+		# duration
 		time_sec = answer_info.get("duration")
 		if time_sec is not None:
-			time_min = time_sec // 60  # Minutes
-			time_sec_remainder = time_sec % 60  # Remaining seconds
+			time_min = time_sec // 60  
+			time_sec_remainder = time_sec % 60 
 			time_form_full = f"{time_min}:{time_sec_remainder:02d}"
 		else:
 			time_form_full = "Unknown"
@@ -123,12 +123,12 @@ def button_handler(message):
 
 		time_sec = answer_info.get("duration")
 		if time_sec is not None:
-			time_min = time_sec // 60  # Minutes
-			time_sec_remainder = time_sec % 60  # Remaining seconds
+			time_min = time_sec // 60  
+			time_sec_remainder = time_sec % 60  
 
 			time_form_full = f"{time_min}:{time_sec_remainder:02d}"
 		else:
-			time_form_full = "Unknown"  # In case the duration is not available
+			time_form_full = "Unknown"  
 
 		answer_ready = f"({time_form_full}){answer_info.get("title")}"
 
@@ -155,13 +155,12 @@ def button_handler(message):
 
 		time_sec = answer_info.get("duration")
 		if time_sec is not None:
-			time_min = time_sec // 60  # Minutes
-			time_sec_remainder = time_sec % 60  # Remaining seconds
+			time_min = time_sec // 60  
+			time_sec_remainder = time_sec % 60  
 
 			time_form_full = f"{time_min}:{time_sec_remainder:02d}"
 		else:
-			time_form_full = "Unknown"  # In case the duration is not available
-
+			time_form_full = "Unknown"  
 		answer_ready = f"({time_form_full}){answer_info.get("title")}"
 		print("Got:   ", answer_info.get('thumbnail'))
 
@@ -227,12 +226,12 @@ def button_handler(message):
 				title1 = "Unknown"
 
 			if time_sec is not None:
-				time_min = time_sec // 60  # Minutes
-				time_sec_remainder = time_sec % 60  # Remaining seconds
+				time_min = time_sec // 60  
+				time_sec_remainder = time_sec % 60  
 
 				time_form_full = f"{time_min}:{time_sec_remainder:02d}"
 			else:
-				time_form_full = "Unknown"  # In case the duration is not available
+				time_form_full = "Unknown"  
 			answer += f'({time_form_full}) {title1}'
 			buttontext =  f'/video{video_id_get(i.get('url')).replace("-", "_")}'
 			image_path = download_image(i.get('thumbnail'))
