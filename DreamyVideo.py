@@ -35,7 +35,6 @@ def send_video_to_chat(chat_id, video_path, caption=None, thumb_path=None):
 				if caption:
 					data["caption"] = caption
 
-				# Send request
 				response = requests.post(url, files=files, data=data)
 				if response.status_code != 200:
 					print(f"Error: {response.text}")
