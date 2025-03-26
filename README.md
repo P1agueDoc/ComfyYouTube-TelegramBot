@@ -1,20 +1,20 @@
 # ComfyYouTube-TelegramBot
-It's a bot to watch youtube (kinda) from telegram chat by bot
+It's a bot that allows you to (kinda) watch YouTube from a Telegram chat using a bot
 
 
 # How to start
-- install all that needed:
+- Install necessary dependencies:
   
     pip install -r requirements.txt
   
-    install https://github.com/tdlib/telegram-bot-api  (you can use guide here: https://tdlib.github.io/telegram-bot-api/build.html?os=Windows)
-- Get cookies because Youtube may block download:
+    install https://github.com/tdlib/telegram-bot-api  (you can follow this guide here: https://tdlib.github.io/telegram-bot-api/build.html?os=Windows)
+- Get cookies because YouTube may block downloads:
   
-    in firefox - download extension coockies.txt. Go to youtube (you should be logged) and use extension (press on it) to download cookies from youtube OR just download all cookies. in chrome - use any other extension that does the job.
-- get Telegram bot api from BotFather
+    in firefox - download extension cookies.txt. Go to youtube (you should be logged) and use extension (press on it) to download cookies from youtube OR just download all cookies. in chrome - use any other extension that does the job.
+- get your Telegram bot api key from BotFather
 - go to https://my.telegram.org/ and get api-id and api-hash
-- go to telegram-bot-api folder (not our bot folder) and create a .txt there.
-- write into .txt:
+- go to telegram-bot-api folder (not root bot folder) and create a .txt there.
+- Open  .txt and write:
   
     cd your-path\telegram-bot-api\bin
   
@@ -22,14 +22,14 @@ It's a bot to watch youtube (kinda) from telegram chat by bot
 - rename .txt into start.bat
 - open start.bat and hide it away
 - Go to folder with bot
-- Open in text book file named DreamyVideo
+- Open the file DreamyVideo in a text editor (notepad)
 - Fill gaps:
   
     API_URL = "your-api-id" (it should be made like that: http://127.0.0.1:8081/bot[your-bot-api] example: API_URL = "http://127.0.0.1:8081/bot67457850:krpkfL54lg450kg4g
   
     bot = telebot.TeleBot("your-bot-api")
 - Save and close
-- Open in text book file named video_download
+- Open in text editor file named video_download
 - Fill gap:
   
     'cookiefile': r"path-to-cookies"
@@ -43,5 +43,5 @@ It's a bot to watch youtube (kinda) from telegram chat by bot
 # Unreadable code or caveman writing
 Sorry for bad code, i just got really tired when writing it and decided to just finish it quickly. And i still learning python.
 
-# YouTube sending Forbiden 403
+# YouTube sending Forbidden 403
 Can't really do anything here. create cookies.txt again, might help for some time.
