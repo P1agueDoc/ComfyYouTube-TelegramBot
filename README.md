@@ -41,10 +41,10 @@ It's a bot that allows you to (kinda) watch YouTube from a Telegram chat using a
 - Enjoy your bot
 
 # Unreadable code or caveman writing
-Sorry for bad code, i just got really tired when writing it and decided to just finish it quickly. And i still learning python.
+Sorry for bad code. I was really tired while writing it and just wanted to finish it quickly. And i'm still learning python.
 
 # YouTube sending Forbidden 403
-Can't really do anything here. create cookies.txt again, might help for some time.
+Can't really do anything here. create cookies.txt again, it might help for a few hours or days?.
 
 
 # No continues for you
