@@ -45,3 +45,7 @@ Sorry for bad code, i just got really tired when writing it and decided to just 
 
 # YouTube sending Forbidden 403
 Can't really do anything here. create cookies.txt again, might help for some time.
+
+
+# No continues for you
+sorry, this project is no longer worked on
